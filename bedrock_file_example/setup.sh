@@ -6,18 +6,7 @@ echo "Bedrock Claude CLI Setup"
 echo "==================================="
 echo ""
 
-# Check if uv is installed
-if ! command -v uv &> /dev/null; then
-    echo "❌ uv is not installed."
-    echo "Installing uv..."
-    curl -LsSf https://astral.sh/uv/install.sh | sh
-    echo "✅ uv installed. Please restart your shell and run this script again."
-    exit 0
-fi
-
-echo "✅ uv is installed"
-echo ""
-
+# Require uv to manage dependencies
 # Install dependencies
 echo "Installing dependencies..."
 uv pip install -e .
