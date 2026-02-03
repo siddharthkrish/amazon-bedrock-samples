@@ -34,7 +34,7 @@ The proxy will run at `http://0.0.0.0:4000`
 curl http://localhost:4000/v1/chat/completions \
   -H "Content-Type: application/json" \
   -d '{
-    "model": "claude-3-5-sonnet",
+    "model": "nova-2-lite",
     "messages": [{"role": "user", "content": "Hello!"}]
   }'
 ```
@@ -49,7 +49,7 @@ client = openai.OpenAI(
 )
 
 response = client.chat.completions.create(
-    model="claude-3-5-sonnet",
+    model="nova-2-lite",
     messages=[{"role": "user", "content": "Hello!"}]
 )
 
@@ -58,8 +58,8 @@ print(response.choices[0].message.content)
 
 ## Available Models
 
-- `claude-3-5-sonnet` - Anthropic Claude 3.5 Sonnet
-- `claude-3-haiku` - Anthropic Claude 3 Haiku
+- `claude-4-5-haiku` - Anthropic Claude 4.5 Haiku
+- `nova-2-lite` - Amazon Nova 2 Lite
 
 ## Adding More Models
 
