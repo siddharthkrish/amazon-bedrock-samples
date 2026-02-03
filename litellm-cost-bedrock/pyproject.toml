@@ -1,0 +1,8 @@
+[project]
+name = "litellm-bedrock-proxy"
+version = "0.1.0"
+description = "LiteLLM proxy for Amazon Bedrock"
+requires-python = ">=3.8"
+dependencies = [
+    "litellm[proxy]",
+]
